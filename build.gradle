@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "http://192.168.1.2:8081/repository/maven-public/"
+        }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+    }
+}
+repositories {
+    google()
+    jcenter()
+    mavenLocal()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+    maven {
+        url "http://192.168.1.2:8081/repository/maven-public/"
+    }
+    mavenLocal()
+}

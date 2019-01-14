@@ -1,0 +1,86 @@
+{
+  "app_name": "Client B App",
+  "server_url": "https://dev.netvirta.com",
+  "package_name": "org.netvirta.app",
+  "init_screen": "SplashScreen",
+  "screens": [
+    {
+      "id": "SplashScreen",
+      "name": "",
+      "actions": {
+        "login_screen": {
+          "id": "CHANGE_SCREEN",
+
+          "params": {
+            "next_screen": "MAIN_SCREEN"
+          }
+        },
+        "main_screen": {
+          "id": "CHANGE_SCREEN",
+          "params": {
+            "next_screen": "MAIN_SCREEN"
+          }
+        }
+      }
+    },
+    {
+      "id": "LoginScreen",
+      "name": "Login",
+      "type": "EMAIL_PASSWORD",
+      "layout": "template_1",
+      "actions": {
+        "login": {
+          "id": "CHANGE_SCREEN",
+          "params": {
+            "next_screen": "LOGIN_SCREEN"
+          }
+        },
+        "last_screen": {
+          "id": "EXIT",
+          "params": {}
+        }
+      }
+    },
+    {
+      "id": "MainScreen",
+      "name": "List of customer",
+      "type": "STANDARD_LIST",
+      "actions": {
+        "logout": {
+          "id": "LOGOUT",
+          "params": {
+            "next_screen": "LoginScreen"
+          }
+        },
+        "last_screen": {
+          "id": "EXIT",
+          "params": {}
+        },
+        "scan_cranial": {
+          "id": "CHANGE_SCREEN",
+          "params": {
+            "next_screen": "ScannerScreen",
+            "scan_type": "Cranial"
+          }
+        },
+        "scan_foot": {
+          "id": "CHANGE_SCREEN",
+          "params": {
+            "next_screen": "ScannerScreen",
+            "scan_type": "Foot"
+          }
+        }
+      }
+    },
+    {
+      "id": "ScannerScreen",
+      "name": "Scanning",
+      "params": [{
+        "name": "scan_type",
+        "type": "String"
+      }]
+    }
+  ]
+}
+
+

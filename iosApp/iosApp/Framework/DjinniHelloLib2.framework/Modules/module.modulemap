@@ -1,0 +1,6 @@
+framework module DjinniHelloLib2 {
+  umbrella header "DjinniHelloLib2.h"
+
+  export *
+  module * { export * }
+}

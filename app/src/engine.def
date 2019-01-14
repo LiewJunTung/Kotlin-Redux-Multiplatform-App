@@ -1,0 +1,8 @@
+language = Objective-C
+
+package = org.djinnihello
+headers = DjinniHelloLib2.h
+headerFilter = **
+
+compilerOpts = -F/Users/juntung/Dev/ProofOfConcept/UseRedux/iosApp/iosApp/Framework -framework DjinniHelloLib2
+linkerOpts = -F/Users/juntung/Dev/ProofOfConcept/UseRedux/iosApp/iosApp/Framework -framework DjinniHelloLib2
